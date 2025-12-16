@@ -1,3 +1,0 @@
-- index.html
-- certificate.jpg  （或 .png）
-- certificate.pdf
