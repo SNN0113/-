@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; padding:50px;">
+    <h1>证书显示测试</h1>
+    
+    <p>测试1：显示 certificate.jpg</p>
+    <img src="certificate.jpg" width="600" id="img1">
+    
+    <p>测试2：如果上面不显示：</p>
+    <a href="certificate.jpg">点击这里查看图片</a>
+    
+    <script>
+        // 检查图片是否加载
+        setTimeout(function() {
+            var img = document.getElementById('img1');
+            if(img.naturalWidth === 0) {
+                alert('图片加载失败！文件名可能是：' + 
+                      '\n1. certificate.jpg' +
+                      '\n2. certificate.png' +
+                      '\n3. cert.jpg');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
