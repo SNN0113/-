@@ -1,64 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>申宁宁继续教育证书</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #2c3e50;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        h1 {
-            color: #1a237e;
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 90vw;
-            max-height: 80vh;
-            border: 5px solid #ddd;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .info {
-            margin-top: 15px;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
+    <title>证书</title>
 </head>
 <body>
-    <div class="container">
-        <h1>专业技术人员继续教育证书</h1>
-        <p style="color: #444; margin-bottom: 15px;">姓名：申宁宁 | 单位：延安职业技术学院</p>
-        
-        <!-- 显示图片 -->
-        <img src="cert.jpg" alt="继续教育证书" id="cert-image">
-        
-        <div class="info">
-            <p>证书编号：6100053002939</p>
-            <p>发证单位：西安电子科技大学继续教育学院</p>
-        </div>
-    </div>
+    <h1>正在加载证书...</h1>
+    <!-- 方法1：最简单的图片显示 -->
+    <img src="cert.jpg">
     
     <script>
         // 检查图片是否加载成功
-        window.onload = function() {
-            var img = document.getElementById('cert-image');
-            if (img.naturalWidth === 0) {
-                alert('⚠️ 图片加载失败！请检查文件名是否为 cert.jpg');
-            } else {
-                console.log('✅ 图片加载成功');
+        setTimeout(function() {
+            var img = document.querySelector('img');
+            if(img.naturalWidth === 0) {
+                document.body.innerHTML = 
+                    '<h1 style="color:red">图片加载失败！</h1>' +
+                    '<p>请检查：</p>' +
+                    '<ul>' +
+                    '<li>图片文件名是否为 cert.jpg</li>' +
+                    '<li>图片是否已上传到GitHub</li>' +
+                    '<li><a href="cert.jpg">点击测试图片链接</a></li>' +
+                    '</ul>';
             }
-        };
+        }, 2000);
     </script>
 </body>
 </html>
